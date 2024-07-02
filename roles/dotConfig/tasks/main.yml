@@ -1,0 +1,6 @@
+- name: Copy all the .config files to user's .config directory
+  ansible.builtin.copy:
+    src: kitty/*
+    dest: /home/{{ ansible_user_id }}/.config/kitty/
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"

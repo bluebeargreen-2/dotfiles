@@ -1,0 +1,8 @@
+---
+- name: Setting up dotfiles
+  hosts: localhost
+  roles:
+    - role: dependencies
+      become: true
+    - role: ohmyzsh
+    - role: dotConfig

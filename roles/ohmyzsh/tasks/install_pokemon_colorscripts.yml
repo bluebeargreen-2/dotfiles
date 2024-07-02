@@ -1,0 +1,18 @@
+---
+- name: Clone pokemon-colorscripts repository
+  ansible.builtin.git:
+    repo: https://gitlab.com/phoneybadger/pokemon-colorscripts.git
+    dest: /home/{{ ansible_user_id }}/pokemon-colorscripts
+    update: no
+
+- name: Install pokemon-colorscripts
+  ansible.builtin.shell: |
+    cd /home/{{ ansible_user_id }}/pokemon-colorscripts && sudo ./install.sh
+  args:
+    creates: /usr/local/bin/pokemon-colorscripts
+
+- name: Clean up pokemon-colorscripts directory
+  ansible.builtin.file:
+    path: /home/{{ ansible_user_id }}/pokemon-colorscripts
+    state: absent
+    force: yes

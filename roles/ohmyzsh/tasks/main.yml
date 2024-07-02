@@ -1,0 +1,9 @@
+---
+- import_tasks: install_ohmyzsh.yml
+- import_tasks: install_zsh_plugins.yml
+- import_tasks: install_pokemon_colorscripts.yml
+- import_tasks: copy_zshrc.yml
+- import_tasks: change_shell.yml
+  become: true
+- import_tasks: source_zshrc.yml
+  become: false

@@ -1,0 +1,7 @@
+---
+- name: Source the .zshrc file
+  ansible.builtin.shell: |
+    source ~/.zshrc
+  args:
+    executable: /bin/zsh
+  become_user: "{{ ansible_user_id }}"

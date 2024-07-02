@@ -1,0 +1,6 @@
+---
+- name: Install Oh My Zsh
+  ansible.builtin.shell: |
+    sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+  args:
+    creates: /home/{{ ansible_user_id }}/.oh-my-zsh
