@@ -1,0 +1,16 @@
+- name: Copy kitty configuration to user's .config directory
+  ansible.builtin.synchronize:
+    src: kitty/
+    dest: /home/{{ ansible_user_id }}/.config/kitty/
+    recursive: yes
+    rsync_opts:
+      - "--chown={{ ansible_user_id }}:{{ ansible_user_id }}"
+      - "--chmod=D0755,F0755"
+
+- name: Ensure correct permissions on kitty configuration directory
+  ansible.builtin.file:
+    path: /home/{{ ansible_user_id }}/.config/kitty/
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: '0755'
+    recurse: yes

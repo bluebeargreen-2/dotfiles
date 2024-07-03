@@ -1,0 +1,7 @@
+---
+- import_tasks: repos.yml
+- import_tasks: package_manager.yml
+- import_tasks: xpipe.yml
+- import_tasks: vivaldi.yml
+- import_tasks: toolbox.yml
+- import_tasks: hyfetch.yml

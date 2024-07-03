@@ -1,0 +1,5 @@
+---
+- name: Installing vivaldi
+  ansible.builtin.package:
+    name: https://downloads.vivaldi.com/stable/vivaldi-stable-6.8.3381.46-1.x86_64.rpm
+    state: present

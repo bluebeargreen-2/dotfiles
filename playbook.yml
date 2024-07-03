@@ -2,7 +2,8 @@
 - name: Setting up dotfiles
   hosts: localhost
   roles:
-    - role: dependencies
+    - role: programs
       become: true
+      when: ansible_facts['os_family'] == "RedHat"
     - role: ohmyzsh
     - role: dotConfig

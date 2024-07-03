@@ -1,0 +1,4 @@
+- name: Installing hyfetc       h
+  pip:
+    name: hyfetch
+    state: present

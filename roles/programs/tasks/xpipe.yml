@@ -1,0 +1,6 @@
+---
+- name: Installing xpipe
+  ansible.builtin.package:
+    name: https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-installer-linux-x86_64.rpm
+    state: present
+    disable_gpg_check: yes

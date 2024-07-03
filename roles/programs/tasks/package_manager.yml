@@ -1,0 +1,14 @@
+---
+- name: Install package's via package manager
+  ansible.builtin.package:
+    name:
+      - wget
+      - zsh
+      - git
+      - kitty
+      - btop
+      - rocm-smi
+      - python-pip
+      - neovim
+      - mullvad-vpn
+    state: present

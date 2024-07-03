@@ -1,0 +1,12 @@
+- name: Installing jetbrains toolbox
+  block:
+    get_url:
+      url: https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-2.4.0.32175.tar.gz
+      dest: /tmp/jetbrains-toolbox.tar.gz
+
+    unarchive:
+      src: /tmp/jetbrains-toolbox.tar.gz
+      dest: /opt
+      remote_src: yes
+
+    command: /./opt/jetbrains-toolbox/jetbrains-toolbox
