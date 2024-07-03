@@ -11,4 +11,5 @@
       - python-pip
       - neovim
       - mullvad-vpn
+      - lsd
     state: present

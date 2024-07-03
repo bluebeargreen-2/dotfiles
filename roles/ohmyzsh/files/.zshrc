@@ -3,6 +3,9 @@ export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 ZSH_THEME="bira"
 
 plugins=(
@@ -24,3 +27,4 @@ source $ZSH/oh-my-zsh.sh
 pokemon-colorscripts --no-title -s -r
 
 alias neofetch="neowofetch"
+alias ls="lsd"
